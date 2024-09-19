@@ -100,15 +100,15 @@ public class BookController
 
 	}
 	// checking that book already present or not if present then you have to return because name is unique
-	public String checkBookIsExists(String name)
+	public String checkBookIsExists(String book_Name)
 	{
-		boolean is=bookService.isbookIsExists(name);
+		boolean is=bookService.isbookIsExists(book_Name);
 		if(is)
 		{
 			System.out.println("Re-Enter Book Name" +"\n"+ "(Because With the Same Book Already Exixts )");
 			String bookName=sc.nextLine();
 			return checkBookIsExists(bookName);
 		}
-		return name;
+		return book_Name;
 	}
 }
